@@ -1,20 +1,49 @@
 <ion-header [translucent]="true">
   <ion-toolbar>
-    <ion-title>
-      Blank
+    <ion-title style="color: aquamarine;">
+      Home
     </ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">Blank</ion-title>
-    </ion-toolbar>
-  </ion-header>
-
   <div id="container">
-    <strong>Ready to create an app?</strong>
-    <p>Start with Ionic <a target="_blank" rel="noopener noreferrer" href="https://ionicframework.com/docs/components">UI Components</a></p>
+    <ion-list>
+      <ion-list-header>
+        <ion-label>Salaires</ion-label>
+      </ion-list-header>
+      <ion-item>
+        <ion-label>Elijah</ion-label>
+        <ion-badge slot="end">22k</ion-badge>
+      </ion-item>
+      <ion-item>
+        <ion-label>Jefstone</ion-label>
+        <ion-badge color="success" slot="end">100k</ion-badge>
+      </ion-item>
+    </ion-list>
+    <ion-buttons slot="primary">
+      <ion-button (click)="next()">
+        <ion-icon name="cash" color="success"></ion-icon>
+      </ion-button>
+    </ion-buttons>
   </div>
 </ion-content>
+
+<ion-footer>
+  <ion-toolbar>
+    <ion-tabs>
+      <!-- Tab bar -->
+      <ion-tab-bar slot="bottom">
+        <ion-tab-button tab="account" [routerLink]="['/account']" (click)="next('account')">
+          <ion-icon name="person"></ion-icon>
+        </ion-tab-button>
+        <ion-tab-button tab="contact" (click)="next('contact')">
+          <ion-icon name="call"></ion-icon>
+        </ion-tab-button>
+        <ion-tab-button tab="settings" (click)="next('settings')">
+          <ion-icon name="settings"></ion-icon>
+        </ion-tab-button>
+      </ion-tab-bar>
+    </ion-tabs>
+  </ion-toolbar>
+</ion-footer>

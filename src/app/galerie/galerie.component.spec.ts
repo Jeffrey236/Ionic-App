@@ -1,7 +1,5 @@
-/* tslint:disable:no-unused-variable */
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
-import { By } from '@angular/platform-browser';
-import { DebugElement } from '@angular/core';
+import { IonicModule } from '@ionic/angular';
 
 import { GalerieComponent } from './galerie.component';
 
@@ -11,16 +9,14 @@ describe('GalerieComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ GalerieComponent ]
-    })
-    .compileComponents();
-  }));
+      declarations: [ GalerieComponent ],
+      imports: [IonicModule.forRoot()]
+    }).compileComponents();
 
-  beforeEach(() => {
     fixture = TestBed.createComponent(GalerieComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
-  });
+  }));
 
   it('should create', () => {
     expect(component).toBeTruthy();
