@@ -1,49 +1,55 @@
-<ion-header [translucent]="true">
-  <ion-toolbar>
-    <ion-title style="color: aquamarine;">
-      Home
-    </ion-title>
-  </ion-toolbar>
-</ion-header>
+<ion-app>
+  <ion-tabs>
 
-<ion-content [fullscreen]="true">
-  <div id="container">
-    <ion-list>
-      <ion-list-header>
-        <ion-label>Salaires</ion-label>
-      </ion-list-header>
-      <ion-item>
-        <ion-label>Elijah</ion-label>
-        <ion-badge slot="end">22k</ion-badge>
-      </ion-item>
-      <ion-item>
-        <ion-label>Jefstone</ion-label>
-        <ion-badge color="success" slot="end">100k</ion-badge>
-      </ion-item>
-    </ion-list>
-    <ion-buttons slot="primary">
-      <ion-button (click)="next()">
-        <ion-icon name="cash" color="success"></ion-icon>
-      </ion-button>
-    </ion-buttons>
-  </div>
-</ion-content>
+    <ion-tab tab="Home">
+      <ion-header translucent>
+        <ion-toolbar>
+          <ion-title style="color: aquamarine;">Home</ion-title>
+        </ion-toolbar>
+      </ion-header>
 
-<ion-footer>
-  <ion-toolbar>
-    <ion-tabs>
-      <!-- Tab bar -->
-      <ion-tab-bar slot="bottom">
-        <ion-tab-button tab="account" [routerLink]="['/account']" (click)="next('account')">
-          <ion-icon name="person"></ion-icon>
-        </ion-tab-button>
-        <ion-tab-button tab="contact" (click)="next('contact')">
-          <ion-icon name="call"></ion-icon>
-        </ion-tab-button>
-        <ion-tab-button tab="settings" (click)="next('settings')">
-          <ion-icon name="settings"></ion-icon>
-        </ion-tab-button>
-      </ion-tab-bar>
-    </ion-tabs>
-  </ion-toolbar>
-</ion-footer>
+      <ion-content fullscreen class="ion-padding">
+        <h1>Home</h1>
+      </ion-content>
+    </ion-tab>
+
+    <ion-tab tab="Galerie">
+      <ion-header translucent>
+        <ion-toolbar>
+          <ion-title style="color: aquamarine;">Galerie</ion-title>
+        </ion-toolbar>
+      </ion-header>
+
+      <ion-content fullscreen class="ion-padding">
+        <h1>Galerie</h1>
+      </ion-content>
+    </ion-tab>
+
+    <ion-tab tab="About">
+      <ion-header translucent>
+        <ion-toolbar>
+          <ion-title style="color: aquamarine;">About</ion-title>
+        </ion-toolbar>
+      </ion-header>
+
+      <ion-content fullscreen class="ion-padding">
+        <h1>About</h1>
+      </ion-content>
+    </ion-tab>
+
+    <ion-tab-bar slot="bottom">
+      <ion-tab-button tab="Home" [routerLink]="['/galerie']">
+        <ion-label>Home</ion-label>
+        <ion-icon name="musical-note"></ion-icon>
+      </ion-tab-button>
+      <ion-tab-button tab="Galerie">
+        <ion-label>Galerie</ion-label>
+        <ion-icon name="videocam"></ion-icon>
+      </ion-tab-button>
+      <ion-tab-button tab="About">
+        <ion-label>About</ion-label>
+        <ion-icon name="game-controller"></ion-icon>
+      </ion-tab-button>
+    </ion-tab-bar>
+  </ion-tabs>
+</ion-app>

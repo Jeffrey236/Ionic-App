@@ -1,15 +1,10 @@
 import { NgModule } from '@angular/core';
 import { PreloadAllModules, RouterModule, Routes } from '@angular/router';
-import { GalerieComponent } from './galerie/galerie.component';
 
 const routes: Routes = [
   {
     path: 'home',
     loadChildren: () => import('./home/home.module').then( m => m.HomePageModule)
-  },
-  {
-    path:'account',
-    component: GalerieComponent
   },
   {
     path: '',
